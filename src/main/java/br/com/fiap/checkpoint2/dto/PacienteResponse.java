@@ -23,6 +23,8 @@ public class PacienteResponse {
         this.email = paciente.getEmail();
         this.telefone_completo = paciente.getTelefone_completo();
         this.dataNascimento = paciente.getDataNascimento();
+        this.createdAt = paciente.getCreatedAt();
+        this.updatedAt = paciente.getUpdatedAt();
         return this;
     }
 
