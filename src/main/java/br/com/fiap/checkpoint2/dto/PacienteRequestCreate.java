@@ -14,12 +14,12 @@ public class PacienteRequestCreate {
 
     public Paciente toModel () {
         Paciente paciente = new Paciente ();
-        paciente.setNome(this.nome);
-        paciente.setEndereco(this.endereco);
-        paciente.setBairro(this.bairro);
-        paciente.setEmail(this.email);
-        paciente.setTelefone_completo(this.telefone_completo);
-        paciente.setDataNascimento(this.dataNascimento);
+        paciente.setNome(nome);
+        paciente.setEndereco(endereco);
+        paciente.setBairro(bairro);
+        paciente.setEmail(email);
+        paciente.setTelefone_completo(telefone_completo);
+        paciente.setDataNascimento(dataNascimento);
         return paciente;
     }
 

@@ -17,14 +17,14 @@ public class PacienteResponse {
     private LocalDateTime updatedAt;
 
     public PacienteResponse toDto (Paciente paciente) {
-        this.nome = paciente.getNome();
-        this.endereco = paciente.getEndereco();
-        this.bairro = paciente.getBairro();
-        this.email = paciente.getEmail();
-        this.telefone_completo = paciente.getTelefone_completo();
-        this.dataNascimento = paciente.getDataNascimento();
-        this.createdAt = paciente.getCreatedAt();
-        this.updatedAt = paciente.getUpdatedAt();
+        nome = paciente.getNome();
+        endereco = paciente.getEndereco();
+        bairro = paciente.getBairro();
+        email = paciente.getEmail();
+        telefone_completo = paciente.getTelefone_completo();
+        dataNascimento = paciente.getDataNascimento();
+        createdAt = paciente.getCreatedAt();
+        updatedAt = paciente.getUpdatedAt();
         return this;
     }
 
