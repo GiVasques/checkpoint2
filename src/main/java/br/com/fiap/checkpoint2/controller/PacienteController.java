@@ -1,11 +1,8 @@
 package br.com.fiap.checkpoint2.controller;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.fiap.checkpoint2.dto.PacienteRequestCreate;
 import br.com.fiap.checkpoint2.dto.PacienteRequestUpdate;
 import br.com.fiap.checkpoint2.dto.PacienteResponse;
-import br.com.fiap.checkpoint2.model.Paciente;
 import br.com.fiap.checkpoint2.service.PacienteService;
 
 @RestController
