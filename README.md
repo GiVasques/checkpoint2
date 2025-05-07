@@ -22,7 +22,7 @@ Os ``endpoints`` presentes na API são:
 - ``GET/pacientes`` - Buscar todos os Pacientes;
 
 **PROFISSIONAIS**
-- ``POST/profissionais`` - Criar Profissional;ok
+- ``POST/profissionais`` - Criar Profissional;
 - ``PUT/profissionais/{id}`` - Atualizar Profissional; 
 - ``DELETE/profissionais/{id}`` - Deletar Profissional;
 - ``GET/profissionais/{id}`` - Buscar Profissional por Id;
