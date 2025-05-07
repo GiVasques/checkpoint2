@@ -17,6 +17,7 @@ public class PacienteResponse {
     private LocalDateTime updatedAt;
 
     public PacienteResponse toDto (Paciente paciente) {
+        id = paciente.getId();
         nome = paciente.getNome();
         endereco = paciente.getEndereco();
         bairro = paciente.getBairro();
