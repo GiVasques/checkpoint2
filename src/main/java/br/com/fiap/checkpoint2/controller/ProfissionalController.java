@@ -24,7 +24,7 @@ import br.com.fiap.checkpoint2.service.ProfissionalService;
 public class ProfissionalController {
 
     @Autowired
-    ProfissionalService profissionalService;
+    private ProfissionalService profissionalService;
     
     @PostMapping
     public ResponseEntity <ProfissionalResponse> createProfissional (@RequestBody ProfissionalRequestCreate dto) {
@@ -34,15 +34,15 @@ public class ProfissionalController {
     }
 
     @PutMapping ("/{id}")
-    public void updateProfissional (@RequestBody ProfissionalRequestUpdate dto, @PathVariable Long id) {
-        profissionalService.updateProfissional(dto, id)
+    public ResponseEntity <ProfissionalResponse> updateProfissional (@RequestBody ProfissionalRequestUpdate dto, @PathVariable Long id) {
+        return profissionalService.updateProfissional(dto, id)
         .map(updatedProfissional -> new ProfissionalResponse().toDto(updatedProfissional))
         .map(ResponseEntity::ok)
         .orElse(ResponseEntity.notFound().build());
     }
 
     @DeleteMapping ("/{id}")
-    public ResponseEntity <ProfissionalResponse> deleteProfissional (@PathVariable Long id) {
+    public ResponseEntity <Void> deleteProfissional (@PathVariable Long id) {
         if (profissionalService.deleteProfissional(id)) 
             return ResponseEntity.noContent().build();
         else

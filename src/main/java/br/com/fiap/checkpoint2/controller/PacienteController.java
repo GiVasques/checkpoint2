@@ -42,7 +42,7 @@ public class PacienteController {
     }
 
     @DeleteMapping ("/{id}")
-    public ResponseEntity <PacienteResponse> deletePaciente (@PathVariable Long id) {
+    public ResponseEntity <Void> deletePaciente (@PathVariable Long id) {
         if (pacienteService.deletePaciente(id)) 
             return ResponseEntity.noContent().build();
         else 
